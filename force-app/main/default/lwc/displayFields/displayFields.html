@@ -1,0 +1,17 @@
+<template>
+   <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_3-of-12 slds-scrollable_y" style="height:20rem;">
+         <lightning-card>
+            <div>
+               <lightning-checkbox-group class="slds-m-left_large" name="fields" options={objectFields}
+                  value={objectFields} onchange={selectedFields}></lightning-checkbox-group>
+            </div>
+         </lightning-card>
+      </div>
+      <div class="slds-col slds-size_9-of-12">
+         <c-display-records selected-final-field={selectedFinalField}></c-display-records>
+      </div>
+   </div>
+   <lightning-button class="slds-m-left_large" value="Get Records" label="Get Records"
+      onclick={getRecords}></lightning-button>
+</template>

@@ -1,0 +1,18 @@
+<template>
+   <lightning-card>
+      <div class="slds-grid slds-gutters">
+         <div class="slds-col slds-size_10-of-12">
+            <lightning-combobox name="obj" label="Select Object" value={selectedObj} options={objLst}
+               onchange={getObjectFields}></lightning-combobox>
+         </div>
+         <div class="slds-col slds-size_2-of-12 slds-m-top_large">
+            <lightning-button label="Create Record" value="Create Record" onclick={createRecord}></lightning-button>
+         </div>
+      </div>
+   </lightning-card>
+   <lightning-card>
+      <div>
+         <c-display-fields></c-display-fields>
+      </div>
+   </lightning-card>
+</template>
